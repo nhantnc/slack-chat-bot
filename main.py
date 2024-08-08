@@ -2,10 +2,10 @@ from flask import Flask
 from chatbot import send_syncing_message
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/rnd-daily-report")
 def hello():
     send_syncing_message()
-    return "Hello, World!"
+    return "Syncing message sent!"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=2101)
